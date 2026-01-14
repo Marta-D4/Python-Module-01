@@ -39,3 +39,26 @@ print("\n=== Day 7 ===")
 for plant in plants:
     growth = plant.height - first_height[plant.name]
     print(f"{plant.get_info()}\nGrowth this week: +{growth}cm")
+
+
+""" 
+    Changes if you want only one plant 
+"""
+
+plant = Plant("rose", 25, 30)
+
+print("=== Day 1 ===")
+print(plant.get_info())
+
+first_height = plant.height
+num_days = 1
+
+while num_days < 7:
+    plant.grow()
+    plant.age()
+    num_days += 1
+
+print("\n=== Day 7 ===")
+growth = plant.height - first_height
+print(f"{plant.get_info()}\nGrowth this week: +{growth}cm")
+
